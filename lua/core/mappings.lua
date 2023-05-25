@@ -46,6 +46,9 @@ M.general = {
     -- new buffer
     ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
+
+    -- neogit
+    ["<leader>gg"] = { "<cmd> Neogit <CR>", "Neogit" },
   },
 
   t = {
@@ -139,7 +142,7 @@ M.lspconfig = {
       "LSP declaration",
     },
 
-    ["gD"] = {
+    ["gd"] = {
       function()
         vim.lsp.buf.definition()
       end,
