@@ -28,6 +28,7 @@ M.general = {
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
     ["<leader>fs"] = { "<cmd> w <CR>", "Save file" },
+    ["<leader>fS"] = { "<cmd> wa <CR>", "Save all" },
 
     -- Copy all
     ["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
