@@ -59,6 +59,11 @@ local plugins = {
         })
      end,
   },
+
+  {
+    'gabrielpoca/replacer.nvim',
+    cmd = "Replacer",
+  }
 }
 
 return plugins

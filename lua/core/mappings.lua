@@ -17,6 +17,8 @@ M.general = {
 
   n = {
     ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
+    ["<leader>mm"] = { "<cmd> set modifiable <CR>", "Set modifiable" },
+
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
     ["<C-l>"] = { "<C-w>l", "Window right" },
@@ -49,6 +51,9 @@ M.general = {
 
     -- neogit
     ["<leader>gg"] = { "<cmd> Neogit <CR>", "Neogit" },
+
+    -- replacer
+    ["<leader>z"] = { "<cmd> lua require('replacer').run() <CR>", "Quickfix replacer" },
   },
 
   t = {
