@@ -24,7 +24,7 @@ local plugins = {
        mappings = {
          i = {
            ["<esc>"] = function(...)
-               require("telescope.actions").close(...)
+             require("telescope.actions").close(...)
             end,
           },
         },
@@ -37,12 +37,12 @@ local plugins = {
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
-          require "custom.configs.null-ls"
+        require "custom.configs.null-ls"
       end,
     },
      config = function()
-        require "plugins.configs.lspconfig"
-        require "custom.configs.lspconfig"
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
      end,
   },
 
@@ -50,13 +50,13 @@ local plugins = {
     'TimUntersberger/neogit',
      cmd = "Neogit",
      config = function()
-         require("neogit").setup({
-           signs = {
-             section = { "", "" },
-             item = { "", "" },
-             hunk = { "", "" },
-           },
-        })
+       require("neogit").setup({
+         signs = {
+           section = { "", "" },
+           item = { "", "" },
+           hunk = { "", "" },
+         },
+      })
      end,
   },
 
@@ -83,13 +83,13 @@ local plugins = {
     'gbprod/yanky.nvim',
     cmd = "YankyYank",
     config = function()
-        require("yanky").setup({
-          highlight = {
-            on_put = true,
-            on_yank = true,
-            timer = 100,
-          },
-        })
+      require("yanky").setup({
+        highlight = {
+          on_put = true,
+          on_yank = true,
+          timer = 100,
+        },
+      })
     end
   }
 }
