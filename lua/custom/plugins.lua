@@ -63,9 +63,19 @@ local plugins = {
   'gabrielpoca/replacer.nvim',
 
   {
-    'tzachar/local-highlight.nvim',
+    'RRethy/vim-illuminate',
+    init = function()
+      vim.defer_fn(function()
+        require('illuminate').toggle()
+      end, 0)
+    end,
     config = function()
-        require('local-highlight').setup()
+      vim.defer_fn(function()
+        require('illuminate').configure({
+          delay = 0,
+        })
+        require('illuminate').toggle()
+      end, 0)
     end,
   },
 

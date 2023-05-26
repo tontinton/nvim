@@ -90,7 +90,7 @@ end
 M.lazy_load = function(plugin)
   vim.api.nvim_create_autocmd({ "BufRead", "BufWinEnter", "BufNewFile" }, {
     group = vim.api.nvim_create_augroup("BeLazyOnFileOpen" .. plugin, {}),
-    callback = function(data)
+    callback = function()
       local file = vim.fn.expand "%"
       local condition = file ~= "NvimTree_1" and file ~= "[lazy]" and file ~= ""
 
@@ -111,8 +111,6 @@ M.lazy_load = function(plugin)
           require("lazy").load { plugins = plugin }
         end
       end
-
-      require('local-highlight').attach(data.buf)
     end,
   })
 end
