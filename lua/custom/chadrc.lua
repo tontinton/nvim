@@ -1,7 +1,7 @@
 ---@type ChadrcConfig 
  local M = {}
  M.ui = {
-  theme = 'bearded-arc',
+  theme = 'chadracula',
   tabufline = {
      overriden_modules = function()
        return {
