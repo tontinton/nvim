@@ -58,6 +58,10 @@ M.general = {
 
     -- replacer
     ["<leader>z"] = { "<cmd> lua require('replacer').run() <CR>", "Quickfix replacer" },
+
+    -- hop
+    ["<leader>s"] = { "<cmd> HopChar1 <CR>", "Hop to 1 char" },
+    ["<leader>S"] = { "<cmd> HopWord <CR>", "Hop to word" },
   },
 
   t = {
