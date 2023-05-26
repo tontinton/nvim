@@ -296,8 +296,8 @@ M.telescope = {
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
     ["gD"]         = { "<cmd> Telescope lsp_references <CR>", "Find references" },
-    ["<leader>fi"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find project symbols" },
-    ["<leader>fI"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find buffer symbols" },
+    ["<leader>fI"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find project symbols" },
+    ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find buffer symbols" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
@@ -307,7 +307,7 @@ M.telescope = {
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
 
     -- theme switcher
-    ["<leader>th"] = { "<cmd> Telescope themes <CR>", "Nvchad themes" },
+    ["<leader>th"] = { "<cmd> Telescope themes <CR>", "Themes" },
 
     ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
   },
