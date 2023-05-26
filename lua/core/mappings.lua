@@ -20,6 +20,7 @@ M.general = {
     ["<leader>mm"] = { "<cmd> set modifiable <CR>", "Set modifiable" },
     ["<leader>qq"] = { "<cmd> qa <CR>", "Quit neovim" },
     ["<leader>qQ"] = { "<cmd> qa! <CR>", "Quit neovim forced" },
+    ["<leader>1"]  = { "<cmd> e <CR>", "Reload buffer" },
 
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
