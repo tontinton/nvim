@@ -68,6 +68,20 @@ local plugins = {
         require('local-highlight').setup()
     end,
   },
+
+  {
+    'gbprod/yanky.nvim',
+    cmd = "YankyYank",
+    config = function()
+        require("yanky").setup({
+          highlight = {
+            on_put = true,
+            on_yank = true,
+            timer = 100,
+          },
+        })
+    end
+  }
 }
 
 return plugins

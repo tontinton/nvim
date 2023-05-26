@@ -309,6 +309,9 @@ M.telescope = {
     -- theme switcher
     ["<leader>th"] = { "<cmd> Telescope themes <CR>", "Themes" },
 
+    -- yank history
+    ["<leader>y"] = { "<cmd> Telescope yank_history <CR>", "Yank history" },
+
     ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
   },
 }
