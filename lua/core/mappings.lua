@@ -156,12 +156,12 @@ M.lspconfig = {
       "LSP declaration",
     },
 
-    ["gd"] = {
-      function()
-        vim.lsp.buf.definition()
-      end,
-      "LSP definition",
-    },
+    -- ["gd"] = {
+    --   function()
+    --     vim.lsp.buf.definition()
+    --   end,
+    --   "LSP definition",
+    -- },
 
     ["K"] = {
       function()
@@ -303,6 +303,7 @@ M.telescope = {
     ["gD"]         = { "<cmd> Telescope lsp_references <CR>", "Find references" },
     ["<leader>fI"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find project symbols" },
     ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find buffer symbols" },
+    ["gd"]         = { "<cmd> Telescope lsp_definitions <CR>", "Find definitions" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
