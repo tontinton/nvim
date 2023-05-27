@@ -107,6 +107,7 @@ local plugins = {
   -- Debugging
 
   'mfussenegger/nvim-dap-python',
+
   'rcarriga/nvim-dap-ui',
 
   {
@@ -150,7 +151,27 @@ local plugins = {
           end;
         },
       }
+
+      local codelldb_root = require("mason-registry").get_package("codelldb"):get_install_path() .. "/extension/"
+      local codelldb_path = codelldb_root .. "adapter/codelldb"
+      local liblldb_path = codelldb_root .. "lldb/lib/liblldb.so"
+      dap.adapters.rust = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
+
+      require('dap.ext.vscode').load_launchjs(nil, {rt_lldb={'rust'}})
     end
+  },
+
+  {
+    'simrat39/rust-tools.nvim',
+    init = function()
+      require("core.utils").lazy_load "rust-tools.nvim"
+    end,
+    opts = function()
+      return require "custom.configs.rust-tools"
+    end,
+    config = function(_, opts)
+      require("rust-tools").setup(opts)
+    end,
   },
 
   {

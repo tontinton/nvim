@@ -5,6 +5,7 @@ local options = {
     "debugpy",
     "rust-analyzer",
     "rustfmt",
+    "codelldb",
     "flake8",
   },
 

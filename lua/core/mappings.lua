@@ -77,7 +77,7 @@ M.general = {
     ["<leader>ds"] = { "<cmd> lua require('dap').step_over() <CR>", "Debug - step over" },
     ["<leader>di"] = { "<cmd> lua require('dap').step_into() <CR>", "Debug - step into" },
     ["<leader>do"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
-    ["<leader>dq"] = { "<cmd> lua require('dap').stop() <CR>", "Debug - stop" },
+    ["<leader>dq"] = { "<cmd> lua require('dap').terminate() <CR>", "Debug - terminate" },
 
     ["<leader>dR"] = { "<cmd> PBClearAllBreakpoints <CR>", "Debug - clear breakpoints" },
   },
@@ -208,7 +208,7 @@ M.lspconfig = {
       "LSP definition type",
     },
 
-    ["<leader>ra"] = {
+    ["<leader>cr"] = {
       function()
         require("nvchad_ui.renamer").open()
       end,
@@ -511,5 +511,15 @@ M.gitsigns = {
     },
   },
 }
+
+M.rust_tools = {
+  plugin = true,
+
+  n = {
+    ["<leader>o"] = { "<cmd> lua require('rust-tools').hover_actions.hover_actions() <CR>", "Rust actions" },
+    ["<leader>a"] = { "<cmd> lua require('rust-tools').code_action_group.code_action_group() <CR>", "Rust utils" },
+  },
+}
+
 
 return M
