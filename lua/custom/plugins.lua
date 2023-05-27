@@ -10,6 +10,7 @@ local plugins = {
         "c",
         "cpp",
         "rust",
+        "python",
 
         "json",
         "dockerfile",
