@@ -41,10 +41,10 @@ local plugins = {
         require "custom.configs.null-ls"
       end,
     },
-     config = function()
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-     end,
+    end,
   },
 
   {
@@ -114,6 +114,9 @@ local plugins = {
     'Weissle/persistent-breakpoints.nvim',
     cmd = { "PBToggleBreakpoint", "PBClearAllBreakpoints" },
     init = function()
+      require("core.utils").lazy_load "persistent-breakpoints.nvim"
+    end,
+    config = function()
       require('persistent-breakpoints').setup({
         load_breakpoints_event = { "BufReadPost" },
       })
