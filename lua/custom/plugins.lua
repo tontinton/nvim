@@ -110,6 +110,16 @@ local plugins = {
   'rcarriga/nvim-dap-ui',
 
   {
+    'Weissle/persistent-breakpoints.nvim',
+    cmd = { "PBToggleBreakpoint", "PBClearAllBreakpoints" },
+    init = function()
+      require('persistent-breakpoints').setup({
+        load_breakpoints_event = { "BufReadPost" },
+      })
+    end,
+  },
+
+  {
     'mfussenegger/nvim-dap',
     config = function()
       local dap, dapui = require("dap"), require("dapui")

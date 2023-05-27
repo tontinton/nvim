@@ -66,7 +66,7 @@ M.general = {
     ["<leader>S"] = { "<cmd> HopWord <CR>", "Hop to word" },
 
     -- debug
-    ["<leader>b"] = { "<cmd> lua require('dap').toggle_breakpoint() <CR>", "Breakpoint" },
+    ["<leader>b"] = { "<cmd> PBToggleBreakpoint <CR>", "Toggle breakpoint" },
 
     ["<F9>"] = { "<cmd> lua require('dap').continue() <CR>", "Debug - continue" },
     ["<F8>"] = { "<cmd> lua require('dap').step_over() <CR>", "Debug - step over" },
@@ -78,6 +78,8 @@ M.general = {
     ["<leader>di"] = { "<cmd> lua require('dap').step_into() <CR>", "Debug - step into" },
     ["<leader>do"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
     ["<leader>dq"] = { "<cmd> lua require('dap').stop() <CR>", "Debug - stop" },
+
+    ["<leader>dR"] = { "<cmd> PBClearAllBreakpoints <CR>", "Debug - clear breakpoints" },
   },
 
   t = {
