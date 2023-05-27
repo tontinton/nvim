@@ -125,6 +125,9 @@ local plugins = {
         dapui.close()
       end
 
+      vim.fn.sign_define('DapBreakpoint',{ text ='⏺', texthl ='', linehl ='', numhl =''})
+      vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
+
       require('dap-python').setup()
       dap.configurations.python = {
         {

@@ -52,7 +52,7 @@ M.general = {
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
 
     -- new buffer
-    ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
+    ["<C-n>"]      = { "<cmd> enew <CR>", "New buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
     -- neogit
@@ -64,6 +64,20 @@ M.general = {
     -- hop
     ["<leader>s"] = { "<cmd> HopChar1 <CR>", "Hop to 1 char" },
     ["<leader>S"] = { "<cmd> HopWord <CR>", "Hop to word" },
+
+    -- debug
+    ["<leader>b"] = { "<cmd> lua require('dap').toggle_breakpoint() <CR>", "Breakpoint" },
+
+    ["<F9>"] = { "<cmd> lua require('dap').continue() <CR>", "Debug - continue" },
+    ["<F8>"] = { "<cmd> lua require('dap').step_over() <CR>", "Debug - step over" },
+    ["<F7>"] = { "<cmd> lua require('dap').step_into() <CR>", "Debug - step into" },
+    ["<F6>"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
+
+    ["<leader>dc"] = { "<cmd> lua require('dap').continue() <CR>", "Debug - continue" },
+    ["<leader>ds"] = { "<cmd> lua require('dap').step_over() <CR>", "Debug - step over" },
+    ["<leader>di"] = { "<cmd> lua require('dap').step_into() <CR>", "Debug - step into" },
+    ["<leader>do"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
+    ["<leader>dq"] = { "<cmd> lua require('dap').stop() <CR>", "Debug - stop" },
   },
 
   t = {
@@ -283,7 +297,6 @@ M.nvimtree = {
 
   n = {
     -- toggle
-    ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
     ["<leader>."] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
   },
 }
