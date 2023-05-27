@@ -12,6 +12,7 @@ local plugins = {
         "rust",
         "python",
 
+        "toml",
         "json",
         "dockerfile",
       },
