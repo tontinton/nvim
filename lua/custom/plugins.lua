@@ -105,6 +105,16 @@ local plugins = {
 
   'nvim-telescope/telescope-live-grep-args.nvim',
 
+  {
+    'echasnovski/mini.nvim',
+    init = function()
+      require("core.utils").lazy_load "mini.nvim"
+    end,
+    config = function()
+      require('mini.ai').setup()
+    end,
+  },
+
   -- Debugging
 
   'mfussenegger/nvim-dap-python',
