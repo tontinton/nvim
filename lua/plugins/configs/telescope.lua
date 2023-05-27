@@ -49,7 +49,7 @@ local options = {
     },
   },
 
-  extensions_list = { "themes", "terms", "yank_history" },
+  extensions_list = { "themes", "terms", "yank_history", "live_grep_args" },
 }
 
 return options

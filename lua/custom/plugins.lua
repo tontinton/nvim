@@ -101,6 +101,8 @@ local plugins = {
       require("hop").setup({})
     end
   },
+
+  'nvim-telescope/telescope-live-grep-args.nvim',
 }
 
 return plugins
