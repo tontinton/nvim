@@ -21,7 +21,8 @@ M.general = {
     ["<leader>qq"] = { "<cmd> qa <CR>", "Quit neovim" },
     ["<leader>qQ"] = { "<cmd> qa! <CR>", "Quit neovim forced" },
     ["<leader>1"]  = { "<cmd> e <CR>", "Reload buffer" },
-    ["<leader>ll"]  = { "<cmd> Lazy <CR>", "Lazy" },
+    ["<leader>ll"] = { "<cmd> Lazy <CR>", "Lazy" },
+    ["<leader>lm"] = { "<cmd> Mason <CR>", "Mason" },
 
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
