@@ -170,12 +170,6 @@ local plugins = {
     init = function()
       require("core.utils").lazy_load "rust-tools.nvim"
     end,
-    opts = function()
-      return require "custom.configs.rust-tools"
-    end,
-    config = function(_, opts)
-      require("rust-tools").setup(opts)
-    end,
   },
 
   {
