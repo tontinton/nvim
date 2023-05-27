@@ -2,6 +2,7 @@ local options = {
   ensure_installed = {
     "lua-language-server",
     "jedi-language-server",
+    "debugpy",
     "rust-analyzer",
     "rustfmt",
     "flake8",
