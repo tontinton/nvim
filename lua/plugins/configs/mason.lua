@@ -7,6 +7,7 @@ local options = {
     "rustfmt",
     "codelldb",
     "flake8",
+    "clangd",
   },
 
   PATH = "skip",

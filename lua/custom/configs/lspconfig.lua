@@ -4,7 +4,10 @@ local utils = require("core.utils")
 local mason_registry = require("mason-registry")
 
 local lspconfig = require "lspconfig"
-local servers = { "jedi_language_server" }
+local servers = {
+  "jedi_language_server",
+  "clangd",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
