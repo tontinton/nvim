@@ -189,6 +189,7 @@ local default_plugins = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
+        "lukas-reineke/cmp-under-comparator",
       },
     },
     opts = function()
