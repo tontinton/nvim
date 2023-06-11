@@ -48,7 +48,12 @@ local options = {
       n = { ["q"] = require("telescope.actions").close },
     },
   },
-
+  pickers = {
+    buffers = {
+      ignore_current_buffer = true,
+      sort_lastused = true,
+    },
+  },
   extensions_list = { "themes", "terms", "yank_history", "live_grep_args" },
 }
 
