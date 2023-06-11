@@ -16,8 +16,8 @@ local default_plugins = {
   },
 
   {
-    "NvChad/ui",
-    branch = "v2.0",
+    "tontinton/ui",
+    branch = "filename-modifier",
     lazy = false,
     config = function()
       require "nvchad_ui"

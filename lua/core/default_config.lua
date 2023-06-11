@@ -36,6 +36,7 @@ M.ui = {
     -- round and block will work for minimal theme only
     separator_style = "default",
     overriden_modules = nil,
+    filename_modifier = "%:.",
   },
 
   -- lazyload it when there are 1+ buffers
