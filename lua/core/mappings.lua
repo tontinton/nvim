@@ -55,8 +55,8 @@ M.general = {
     ["<C-n>"]      = { "<cmd> enew <CR>", "New buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
-    -- neogit
-    ["<leader>gg"] = { "<cmd> Neogit <CR>", "Neogit" },
+    -- lazygit
+    ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Lazygit" },
 
     -- replacer
     ["<leader>z"] = { "<cmd> lua require('replacer').run() <CR>", "Quickfix replacer" },
@@ -326,6 +326,9 @@ M.telescope = {
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
     ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+
+    -- lazygit
+    ["<leader>gp"] = { "<cmd> Telescope lazygit <CR>", "LazyGit projects" },
 
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },

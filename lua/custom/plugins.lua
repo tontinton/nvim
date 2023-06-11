@@ -60,17 +60,20 @@ local plugins = {
   },
 
   {
-    'TimUntersberger/neogit',
-     cmd = "Neogit",
-     config = function()
-       require("neogit").setup({
-         signs = {
-           section = { "", "" },
-           item = { "", "" },
-           hunk = { "", "" },
-         },
-      })
-     end,
+    'kdheepak/lazygit.nvim',
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = "LazyGit",
+    init = function()
+      require("core.utils").lazy_load "lazygit.nvim"
+    end,
+    config = function()
+      vim.cmd [[
+        autocmd BufEnter * :lua require('lazygit.utils').project_root_dir()
+      ]]
+    end,
   },
 
   'gabrielpoca/replacer.nvim',

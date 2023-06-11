@@ -56,7 +56,7 @@ local options = {
       sort_lastused = true,
     },
   },
-  extensions_list = { "themes", "terms", "yank_history", "live_grep_args" },
+  extensions_list = { "themes", "terms", "yank_history", "live_grep_args", "lazygit" },
 }
 
 return options
