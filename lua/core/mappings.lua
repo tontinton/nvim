@@ -321,6 +321,7 @@ M.telescope = {
     ["<leader>fI"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find project symbols" },
     ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find buffer symbols" },
     ["gd"]         = { "<cmd> Telescope lsp_definitions <CR>", "Find definitions" },
+    ["<leader>'"]  = { "<cmd> Telescope resume <CR>", "Resume last telescope" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
