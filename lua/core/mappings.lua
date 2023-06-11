@@ -430,7 +430,7 @@ M.blankline = {
   plugin = true,
 
   n = {
-    ["<leader>cc"] = {
+    ["<leader>cC"] = {
       function()
         local ok, start = require("indent_blankline.utils").get_current_context(
           vim.g.indent_blankline_context_patterns,
@@ -521,5 +521,12 @@ M.rust_tools = {
   },
 }
 
+M.treesitter_context = {
+  plugin = true,
+
+  n = {
+    ["<leader>cc"] = { "<cmd> lua require('treesitter-context').go_to_context() <CR>", "Jump to context" },
+  },
+}
 
 return M

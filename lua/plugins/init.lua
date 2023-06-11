@@ -72,6 +72,7 @@ local default_plugins = {
     config = function(_, opts)
       require("core.utils").load_mappings "blankline"
       dofile(vim.g.base46_cache .. "blankline")
+      opts.show_current_context_start = false
       require("indent_blankline").setup(opts)
     end,
   },
