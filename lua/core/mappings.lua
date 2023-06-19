@@ -317,10 +317,10 @@ M.telescope = {
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
-    ["gD"]         = { "<cmd> Telescope lsp_references <CR>", "Find references" },
-    ["<leader>fI"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find project symbols" },
-    ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find buffer symbols" },
-    ["gd"]         = { "<cmd> Telescope lsp_definitions <CR>", "Find definitions" },
+    ["gD"]         = { "<cmd> Telescope lsp_references fname_width=80 <CR>", "Find references" },
+    ["<leader>fI"] = { "<cmd> Telescope lsp_workspace_symbols fname_width=80 <CR>", "Find project symbols" },
+    ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols fname_width=80 <CR>", "Find buffer symbols" },
+    ["gd"]         = { "<cmd> Telescope lsp_definitions fname_width=80 <CR>", "Find definitions" },
     ["<leader>'"]  = { "<cmd> Telescope resume <CR>", "Resume last telescope" },
 
     -- git
