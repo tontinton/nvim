@@ -26,7 +26,10 @@ local plugins = {
     end,
     config = function()
       require("core.utils").load_mappings "treesitter_context"
-      require('treesitter-context').setup()
+      require('treesitter-context').setup({
+        max_lines = 2,
+        trim_scope = 'inner',
+      })
     end,
   },
 
