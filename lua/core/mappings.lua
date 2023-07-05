@@ -56,7 +56,8 @@ M.general = {
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
     -- lazygit
-    ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Lazygit" },
+    ["<leader>gg"] = { "<cmd> LazyGitCurrentFile <CR>", "Lazygit file" },
+    ["<leader>gG"] = { "<cmd> LazyGit <CR>", "Lazygit dir" },
 
     -- replacer
     ["<leader>z"] = { "<cmd> lua require('replacer').run() <CR>", "Quickfix replacer" },
