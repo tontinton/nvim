@@ -34,6 +34,13 @@ local options = {
       utils.load_mappings("rust_tools", { buffer = bufnr })
       return on_attach(client, bufnr)
     end,
+    settings = {
+      ["rust-analyzer"] = {
+        diagnostics = {
+          disabled = { "unresolved-proc-macro" }
+        },
+      }
+    }
   },
   capabilities = capabilities,
   dap = {
