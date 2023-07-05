@@ -104,6 +104,13 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end,
 })
 
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = {"*.Jenkinsfile"},
+  callback = function()
+    vim.cmd [[set filetype=groovy]]
+  end
+})
+
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 
