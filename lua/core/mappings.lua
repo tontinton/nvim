@@ -23,6 +23,7 @@ M.general = {
     ["<leader>1"]  = { "<cmd> e <CR>", "Reload buffer" },
     ["<leader>ll"] = { "<cmd> Lazy <CR>", "Lazy" },
     ["<leader>lm"] = { "<cmd> Mason <CR>", "Mason" },
+    ["<leader>x"] = { "<cmd> bd <CR>", "Close buffer" },
 
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
@@ -118,14 +119,6 @@ M.tabufline = {
         require("nvchad_ui.tabufline").tabuflinePrev()
       end,
       "Goto prev buffer",
-    },
-
-    -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
-      function()
-        require("nvchad_ui.tabufline").close_buffer()
-      end,
-      "Close buffer",
     },
   },
 }
