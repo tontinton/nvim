@@ -84,17 +84,12 @@ local plugins = {
   {
     'RRethy/vim-illuminate',
     init = function()
-      vim.defer_fn(function()
-        require('illuminate').toggle()
-      end, 0)
+      require("core.utils").lazy_load "vim-illuminate"
     end,
     config = function()
-      vim.defer_fn(function()
-        require('illuminate').configure({
-          delay = 0,
-        })
-        require('illuminate').toggle()
-      end, 0)
+      require('illuminate').configure({
+        delay = 0,
+      })
     end,
   },
 
