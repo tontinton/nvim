@@ -23,7 +23,8 @@ M.general = {
     ["<leader>1"]  = { "<cmd> e <CR>", "Reload buffer" },
     ["<leader>ll"] = { "<cmd> Lazy <CR>", "Lazy" },
     ["<leader>lm"] = { "<cmd> Mason <CR>", "Mason" },
-    ["<leader>x"] = { "<cmd> bd <CR>", "Close buffer" },
+    ["<leader>x"] = { "<cmd> bw <CR>", "Wipe buffer" },
+    ["<leader>X"] = { "<cmd> bd <CR>", "Delete buffer" },
 
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
