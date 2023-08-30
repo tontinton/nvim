@@ -524,7 +524,7 @@ M.treesitter_context = {
   plugin = true,
 
   n = {
-    ["<leader>cc"] = { "<cmd> lua require('treesitter-context').go_to_context() <CR>", "Jump to context" },
+    ["<leader>cc"] = { "m'<cmd> lua require('treesitter-context').go_to_context() <CR>", "Jump to context" },
   },
 }
 
