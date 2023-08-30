@@ -52,6 +52,7 @@ opt.whichwrap:append "<>[]hl"
 g.mapleader = " "
 
 vim.wo.relativenumber = true
+vim.o.jumpoptions = "stack"
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
