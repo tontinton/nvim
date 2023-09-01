@@ -4,7 +4,6 @@ local options = {
     "jedi-language-server",
     "debugpy",
     "rust-analyzer",
-    "rustfmt",
     "codelldb",
     "flake8",
     "clangd",
