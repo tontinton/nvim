@@ -98,6 +98,9 @@ local plugins = {
     cmd = "YankyYank",
     config = function()
       require("yanky").setup({
+        ring = {
+          history_length = 20,
+        },
         highlight = {
           on_put = true,
           on_yank = true,
