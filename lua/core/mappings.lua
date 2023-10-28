@@ -16,7 +16,7 @@ M.general = {
   },
 
   n = {
-    ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
+    ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
     ["<leader>mm"] = { "<cmd> set modifiable <CR>", "Set modifiable" },
     ["<leader>qq"] = { "<cmd> qa <CR>", "Quit neovim" },
     ["<leader>qQ"] = { "<cmd> qa! <CR>", "Quit neovim forced" },
