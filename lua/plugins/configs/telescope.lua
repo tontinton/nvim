@@ -61,7 +61,15 @@ local options = {
       sort_lastused = true,
     },
   },
-  extensions_list = { "themes", "terms", "yank_history", "live_grep_args", "lazygit" },
+  extensions_list = { "themes", "terms", "yank_history", "live_grep_args", "lazygit", "fzf" },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    },
+  },
 }
 
 return options
