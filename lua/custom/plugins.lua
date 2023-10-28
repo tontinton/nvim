@@ -100,6 +100,7 @@ local plugins = {
       require("yanky").setup({
         ring = {
           history_length = 20,
+          storage = "memory",
         },
         highlight = {
           on_put = true,
