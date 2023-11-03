@@ -13,7 +13,7 @@ local default_plugins = {
   },
 
   {
-    "tontinton/ui",
+    "NvChad/ui",
     branch = "v2.0",
     lazy = false,
   },

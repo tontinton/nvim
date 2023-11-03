@@ -35,8 +35,25 @@ M.ui = {
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "default",
-    overriden_modules = nil,
-    filename_modifier = "%:.",
+    overriden_modules = function(modules)
+      modules[2] = (function()
+        local icon = " 󰈚 "
+        local name = (vim.fn.expand "%" == "" and "Empty ") or vim.fn.expand("%:.")
+
+        if name ~= "Empty " then
+          local devicons_present, devicons = pcall(require, "nvim-web-devicons")
+
+          if devicons_present then
+            local ft_icon = devicons.get_icon(name)
+            icon = (ft_icon ~= nil and " " .. ft_icon) or icon
+          end
+
+          name = " " .. name .. " "
+        end
+
+        return "%#St_file_info#" .. icon .. name .. "%#St_file_sep#" .. ""
+      end)()
+    end,
   },
 
   -- lazyload it when there are 1+ buffers
