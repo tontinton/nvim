@@ -49,6 +49,8 @@ local options = {
     mappings = {
       n = {
         ["q"] = require("telescope.actions").close,
+      },
+      i = {
         ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
         ["<C-g>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
         ["<C-t>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -t " }),
