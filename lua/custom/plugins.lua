@@ -173,9 +173,9 @@ local plugins = {
           -- Debug
           { mode = 'n', keys = '<leader>d', desc="+Debug" },
           { mode = 'n', keys = '<leader>dc', postkeys = '<leader>d' },
-          { mode = 'n', keys = '<leader>ds', postkeys = '<leader>d' },
-          { mode = 'n', keys = '<leader>di', postkeys = '<leader>d' },
-          { mode = 'n', keys = '<leader>do', postkeys = '<leader>d' },
+          { mode = 'n', keys = '<leader>dj', postkeys = '<leader>d' },
+          { mode = 'n', keys = '<leader>dl', postkeys = '<leader>d' },
+          { mode = 'n', keys = '<leader>dh', postkeys = '<leader>d' },
 
           -- Bracketed
           { mode = 'n', keys = ']b', postkeys = ']' },

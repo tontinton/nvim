@@ -77,9 +77,9 @@ M.general = {
     ["<F6>"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
 
     ["<leader>dc"] = { "<cmd> lua require('dap').continue() <CR>", "Debug - continue" },
-    ["<leader>ds"] = { "<cmd> lua require('dap').step_over() <CR>", "Debug - step over" },
-    ["<leader>di"] = { "<cmd> lua require('dap').step_into() <CR>", "Debug - step into" },
-    ["<leader>do"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
+    ["<leader>dj"] = { "<cmd> lua require('dap').step_over() <CR>", "Debug - step over" },
+    ["<leader>dl"] = { "<cmd> lua require('dap').step_into() <CR>", "Debug - step into" },
+    ["<leader>dh"] = { "<cmd> lua require('dap').step_out() <CR>", "Debug - step out" },
     ["<leader>dq"] = { "<cmd> lua require('dap').terminate() <CR>", "Debug - terminate" },
 
     ["<leader>dR"] = { "<cmd> PBClearAllBreakpoints <CR>", "Debug - clear breakpoints" },
