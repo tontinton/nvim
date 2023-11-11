@@ -129,8 +129,74 @@ local plugins = {
     end,
     config = function()
       require('mini.ai').setup()
-      require('mini.files').setup()
       require('mini.bracketed').setup()
+      require('mini.files').setup()
+
+      local clue = require('mini.clue')
+      clue.setup({
+        triggers = {
+          -- Leader triggers
+          { mode = 'n', keys = '<Leader>' },
+          { mode = 'x', keys = '<Leader>' },
+
+          -- Built-in completion
+          { mode = 'i', keys = '<C-x>' },
+
+          -- `g` key
+          { mode = 'n', keys = 'g' },
+          { mode = 'x', keys = 'g' },
+
+          -- Marks
+          { mode = 'n', keys = "'" },
+          { mode = 'n', keys = '`' },
+          { mode = 'x', keys = "'" },
+          { mode = 'x', keys = '`' },
+
+          -- Registers
+          { mode = 'n', keys = '"' },
+          { mode = 'x', keys = '"' },
+          { mode = 'i', keys = '<C-r>' },
+          { mode = 'c', keys = '<C-r>' },
+
+          -- Window commands
+          { mode = 'n', keys = '<C-w>' },
+
+          -- `z` key
+          { mode = 'n', keys = 'z' },
+          { mode = 'x', keys = 'z' },
+
+          -- Bracketed
+          { mode = 'n', keys = ']' },
+          { mode = 'n', keys = '[' },
+        },
+        clues = {
+          -- Debug
+          { mode = 'n', keys = '<leader>d', desc="+Debug" },
+          { mode = 'n', keys = '<leader>dc', postkeys = '<leader>d' },
+          { mode = 'n', keys = '<leader>ds', postkeys = '<leader>d' },
+          { mode = 'n', keys = '<leader>di', postkeys = '<leader>d' },
+          { mode = 'n', keys = '<leader>do', postkeys = '<leader>d' },
+
+          -- Bracketed
+          { mode = 'n', keys = ']b', postkeys = ']' },
+          { mode = 'n', keys = ']w', postkeys = ']' },
+          { mode = 'n', keys = '[b', postkeys = '[' },
+          { mode = 'n', keys = '[w', postkeys = '[' },
+
+          clue.gen_clues.builtin_completion(),
+          clue.gen_clues.g(),
+          clue.gen_clues.marks(),
+          clue.gen_clues.registers(),
+          clue.gen_clues.windows(),
+          clue.gen_clues.z(),
+        },
+        window = {
+          delay = 250, -- ms
+          config = {
+            width = 'auto',
+          }
+        }
+      })
     end,
   },
 
