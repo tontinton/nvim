@@ -130,6 +130,7 @@ local plugins = {
     config = function()
       require('mini.ai').setup()
       require('mini.files').setup()
+      require('mini.bracketed').setup()
     end,
   },
 
