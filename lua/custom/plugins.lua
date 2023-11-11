@@ -131,6 +131,7 @@ local plugins = {
       require('mini.ai').setup()
       require('mini.bracketed').setup()
       require('mini.files').setup()
+      require('mini.move').setup()
 
       local clue = require('mini.clue')
       clue.setup({
