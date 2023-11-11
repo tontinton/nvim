@@ -185,6 +185,12 @@ local plugins = {
           { mode = 'n', keys = '[b', postkeys = '[' },
           { mode = 'n', keys = '[w', postkeys = '[' },
 
+          -- Window
+          { mode = 'n', keys = '<C-w>>', postkeys = '<C-w>' },
+          { mode = 'n', keys = '<C-w><', postkeys = '<C-w>' },
+          { mode = 'n', keys = '<C-w>+', postkeys = '<C-w>' },
+          { mode = 'n', keys = '<C-w>-', postkeys = '<C-w>' },
+
           clue.gen_clues.builtin_completion(),
           clue.gen_clues.g(),
           clue.gen_clues.marks(),
