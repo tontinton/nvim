@@ -289,12 +289,12 @@ M.lspconfig = {
   },
 }
 
-M.nvimtree = {
+M.mini = {
   plugin = true,
 
   n = {
-    -- toggle
-    ["<leader>."] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
+    -- mini.files
+    ["<leader>."] = { "<cmd> lua require('mini.files').open(vim.api.nvim_buf_get_name(0)) <CR>", "Open files" },
   },
 }
 

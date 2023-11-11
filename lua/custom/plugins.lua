@@ -125,9 +125,11 @@ local plugins = {
     'echasnovski/mini.nvim',
     init = function()
       require("core.utils").lazy_load "mini.nvim"
+      require("core.utils").load_mappings "mini"
     end,
     config = function()
       require('mini.ai').setup()
+      require('mini.files').setup()
     end,
   },
 
