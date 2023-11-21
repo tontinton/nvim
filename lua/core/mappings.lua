@@ -266,6 +266,11 @@ M.lspconfig = {
       "LSP formatting",
     },
 
+    ["<A-o>"] = {
+      "<cmd> ClangdSwitchSourceHeader <CR>",
+      "Switch h/c"
+    },
+
     ["<leader>wa"] = {
       function()
         vim.lsp.buf.add_workspace_folder()
