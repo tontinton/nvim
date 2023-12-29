@@ -65,8 +65,8 @@ M.general = {
     ["<leader>z"] = { "<cmd> lua require('replacer').run() <CR>", "Quickfix replacer" },
 
     -- hop
-    ["<leader>s"] = { "<cmd> HopChar1 <CR>", "Hop to 1 char" },
-    ["<leader>S"] = { "<cmd> HopWord <CR>", "Hop to word" },
+    ["<leader>S"] = { "<cmd> HopChar1 <CR>", "Hop to 1 char" },
+    ["<leader>s"] = { "<cmd> HopWord <CR>", "Hop to word" },
 
     -- debug
     ["<leader>b"] = { "<cmd> PBToggleBreakpoint <CR>", "Toggle breakpoint" },
