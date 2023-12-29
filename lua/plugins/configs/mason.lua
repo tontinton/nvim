@@ -7,6 +7,7 @@ local options = {
     "codelldb",
     "flake8",
     "clangd",
+    "gopls",
   },
 
   PATH = "skip",

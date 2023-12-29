@@ -7,6 +7,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "jedi_language_server",
   "clangd",
+  "gopls"
 }
 
 for _, lsp in ipairs(servers) do
