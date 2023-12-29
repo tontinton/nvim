@@ -211,6 +211,7 @@ local plugins = {
   -- Debugging
 
   'mfussenegger/nvim-dap-python',
+  'leoluz/nvim-dap-go',
 
   'rcarriga/nvim-dap-ui',
 
@@ -245,6 +246,8 @@ local plugins = {
 
       vim.fn.sign_define('DapBreakpoint',{ text ='⏺', texthl ='', linehl ='', numhl =''})
       vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
+
+      require('dap-go').setup()
 
       require('dap-python').setup()
       dap.configurations.python = {
