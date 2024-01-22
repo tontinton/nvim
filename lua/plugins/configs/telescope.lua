@@ -24,7 +24,7 @@ local options = {
         results_width = 0.8,
       },
       vertical = {
-        prompt_position = "bottom",
+        prompt_position = "top",
         mirror = true,
         preview_cutoff = 10,
       },
