@@ -321,6 +321,8 @@ M.telescope = {
     ["<leader>fI"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols symbol_type_width=12 symbol_width=80 <CR>", "Find project symbols" },
     ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols symbol_type_width=12 symbol_width=80 <CR>", "Find buffer symbols" },
     ["gd"]         = { "<cmd> Telescope lsp_definitions fname_width=80 <CR>", "Find definitions" },
+    ["<leader>fe"] = { "<cmd> Telescope diagnostics bufnr=0 severity=ERROR <CR>", "Errors" },
+    ["<leader>fE"] = { "<cmd> Telescope diagnostics bufnr=0 <CR>", "Diagnostics" },
     ["<leader>'"]  = { "<cmd> Telescope resume <CR>", "Resume last telescope" },
 
     -- git
