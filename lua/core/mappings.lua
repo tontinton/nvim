@@ -311,6 +311,7 @@ M.telescope = {
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
     ["<leader>fw"] = { "<cmd> Telescope live_grep_args <CR>", "Live grep (args)" },
+    ["<leader>fd"] = { "<cmd> lua require('telescope').extensions.live_grep_args.live_grep_args({cwd=require('telescope.utils').buffer_dir()}) <CR>", "Live grep in dir (args)" },
     ["<leader>fW"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
     ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
     ["<leader>,"]  = { "<cmd> Telescope buffers <CR>", "Find buffers" },
