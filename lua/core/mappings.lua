@@ -318,8 +318,8 @@ M.telescope = {
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
     ["gD"]         = { "<cmd> Telescope lsp_references fname_width=80 <CR>", "Find references" },
-    ["<leader>fI"] = { "<cmd> Telescope lsp_workspace_symbols fname_width=80 <CR>", "Find project symbols" },
-    ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols fname_width=80 <CR>", "Find buffer symbols" },
+    ["<leader>fI"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols symbol_type_width=12 symbol_width=80 <CR>", "Find project symbols" },
+    ["<leader>fi"] = { "<cmd> Telescope lsp_document_symbols symbol_type_width=12 symbol_width=80 <CR>", "Find buffer symbols" },
     ["gd"]         = { "<cmd> Telescope lsp_definitions fname_width=80 <CR>", "Find definitions" },
     ["<leader>'"]  = { "<cmd> Telescope resume <CR>", "Resume last telescope" },
 
