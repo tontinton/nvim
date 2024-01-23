@@ -61,7 +61,7 @@ local options = {
   pickers = {
     buffers = {
       ignore_current_buffer = true,
-      sort_lastused = true,
+      sort_mru = true,
     },
   },
   extensions_list = { "themes", "terms", "yank_history", "live_grep_args", "lazygit", "fzf" },
