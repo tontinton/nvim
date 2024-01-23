@@ -53,6 +53,7 @@ local options = {
       i = {
         ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
         ["<C-g>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -g " }),
+        ["<C-d>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = ' -g "' .. vim.fn.expand('%:h') .. '/**"' }),
         ["<C-t>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " -t " }),
       },
     },
