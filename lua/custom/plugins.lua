@@ -82,6 +82,13 @@ local plugins = {
   'gabrielpoca/replacer.nvim',
 
   {
+    'mg979/vim-visual-multi',
+    init = function()
+      require("core.utils").lazy_load "vim-visual-multi"
+    end,
+  },
+
+  {
     'RRethy/vim-illuminate',
     init = function()
       require("core.utils").lazy_load "vim-illuminate"
