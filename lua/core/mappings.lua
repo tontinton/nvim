@@ -60,7 +60,6 @@ M.general = {
     ["<Down>"] = { '(v:count > 1 ? "m\'" . v:count : "") . (v:count || mode(1)[0:1] == "no" ? "j" : "gj")', "Move down", opts = { expr = true } },
 
     -- new buffer
-    ["<C-n>"]      = { "<cmd> enew <CR>", "New buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
     -- lazygit
