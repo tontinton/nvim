@@ -26,6 +26,8 @@ M.general = {
     ["<leader>x"] = { "<cmd> bw <CR>", "Wipe buffer" },
     ["<leader>X"] = { "<cmd> bd <CR>", "Delete buffer" },
 
+    ["<leader>re"] = { ':%s/<C-r><C-w>/<C-r><C-w>/gcI<Left><Left><Left><Left>', "Replace word" },
+
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
     ["<C-l>"] = { "<C-w>l", "Window right" },
@@ -92,6 +94,7 @@ M.general = {
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
+    ["<leader>re"] = { '"hy:%s/<C-r>h/<C-r>h/gc<left><left><left>', "Replace" },
   },
 
   x = {
