@@ -28,6 +28,10 @@ M.general = {
 
     ["<leader>re"] = { ':%s/<C-r><C-w>/<C-r><C-w>/gcI<Left><Left><Left><Left>', "Replace word" },
 
+    -- fix scroll to stay in middle of screen
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
+
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
     ["<C-l>"] = { "<C-w>l", "Window right" },
