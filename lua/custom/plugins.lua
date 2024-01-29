@@ -80,6 +80,7 @@ local plugins = {
   },
 
   'gabrielpoca/replacer.nvim',
+  'NMAC427/guess-indent.nvim',
 
   {
     'mg979/vim-visual-multi',
