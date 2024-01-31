@@ -44,6 +44,22 @@ local function border(hl_name)
   }
 end
 
+local max_buffer_size = 100 * 1024 -- 100kb
+
+local buffer_source = {
+  name = "buffer",
+  option = {
+    get_bufnrs = function()
+      local buf = vim.api.nvim_get_current_buf()
+      local byte_size = vim.api.nvim_buf_get_offset(buf, vim.api.nvim_buf_line_count(buf))
+      if byte_size > max_buffer_size then
+        return {}
+      end
+      return { buf }
+    end,
+  },
+}
+
 local options = {
   completion = {
     completeopt = "menu,menuone",
@@ -116,7 +132,7 @@ local options = {
   sources = {
     { name = "nvim_lsp", priority = 10 },
     { name = "luasnip", priority = 5 },
-    { name = "buffer", priority = 5 },
+    vim.tbl_deep_extend("force", buffer_source, { priority = 5 }),
     { name = "path", priority = 3 },
     { name = "nvim_lua", priority = 3 },
   },
