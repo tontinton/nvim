@@ -57,6 +57,7 @@ local buffer_source = {
       end
       return { buf }
     end,
+    indexing_interval = 1000,
   },
 }
 
@@ -149,6 +150,10 @@ local options = {
       cmp.config.compare.sort_text,
       cmp.config.compare.length,
     },
+  },
+  performance = {
+    max_view_entries = 8,
+    debounce = 150,
   },
 }
 
