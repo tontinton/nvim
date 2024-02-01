@@ -5,6 +5,7 @@ local options = {
     "debugpy",
     "rust-analyzer",
     "codelldb",
+    "cpptools",
     "flake8",
     "clangd",
     "gopls",

@@ -255,8 +255,10 @@ local plugins = {
       vim.fn.sign_define('DapBreakpoint',{ text ='⏺', texthl ='', linehl ='', numhl =''})
       vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
 
+      -- Go
       require('dap-go').setup()
 
+      -- Python
       require('dap-python').setup()
       dap.configurations.python = {
         {
@@ -270,12 +272,32 @@ local plugins = {
         },
       }
 
+      -- C/C++
+      dap.adapters.cppdbg = {
+        id = 'cppdbg',
+        type = 'executable',
+        command = vim.fn.stdpath('data') .. '/mason/bin/OpenDebugAD7',
+      }
+      dap.configurations.c = {
+        {
+          name = "Launch file",
+          type = "cppdbg",
+          request = "launch",
+          program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+          end,
+          cwd = '${workspaceFolder}',
+          stopAtEntry = true,
+        },
+      }
+
+      -- Rust
       local codelldb_root = require("mason-registry").get_package("codelldb"):get_install_path() .. "/extension/"
       local codelldb_path = codelldb_root .. "adapter/codelldb"
       local liblldb_path = codelldb_root .. "lldb/lib/liblldb.so"
       dap.adapters.rust = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
 
-      require('dap.ext.vscode').load_launchjs(nil, {rt_lldb={'rust'}})
+      require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'c', 'h'}, rt_lldb={'rust'}})
     end
   },
 
