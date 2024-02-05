@@ -81,7 +81,17 @@ local plugins = {
   },
 
   'gabrielpoca/replacer.nvim',
-  'NMAC427/guess-indent.nvim',
+
+  {
+    'NMAC427/guess-indent.nvim',
+    cmd = "GuessIndent",
+    init = function()
+      require("core.utils").lazy_load "guess-indent.nvim"
+    end,
+    config = function()
+      require('guess-indent').setup({})
+    end,
+  },
 
   {
     'mg979/vim-visual-multi',
