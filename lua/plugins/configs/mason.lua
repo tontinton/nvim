@@ -9,6 +9,7 @@ local options = {
     "flake8",
     "clangd",
     "gopls",
+    "gofumpt",
   },
 
   PATH = "skip",

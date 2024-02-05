@@ -11,6 +11,9 @@ local sources = {
   formatting.autoflake,
   lint.flake8,
 
+  -- Go
+  formatting.gofumpt,
+
   lint.shellcheck,
 }
 
