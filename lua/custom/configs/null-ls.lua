@@ -14,6 +14,9 @@ local sources = {
   -- Go
   formatting.gofumpt,
 
+  -- C/C++
+  formatting.clang_format,
+
   lint.shellcheck,
 }
 

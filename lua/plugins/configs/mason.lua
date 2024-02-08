@@ -6,6 +6,7 @@ local options = {
     "rust-analyzer",
     "codelldb",
     "cpptools",
+    "clang-format",
     "flake8",
     "clangd",
     "gopls",

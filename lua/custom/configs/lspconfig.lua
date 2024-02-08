@@ -6,7 +6,6 @@ local mason_registry = require("mason-registry")
 local lspconfig = require "lspconfig"
 local servers = {
   "jedi_language_server",
-  "clangd",
   "gopls"
 }
 
@@ -16,6 +15,15 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.clangd.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
+}
 
 -- Rust config
 
