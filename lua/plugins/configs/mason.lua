@@ -11,6 +11,7 @@ local options = {
     "clangd",
     "gopls",
     "gofumpt",
+    "typescript-language-server",
   },
 
   PATH = "skip",

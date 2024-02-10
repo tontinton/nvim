@@ -6,7 +6,8 @@ local mason_registry = require("mason-registry")
 local lspconfig = require "lspconfig"
 local servers = {
   "jedi_language_server",
-  "gopls"
+  "gopls",
+  "tsserver",
 }
 
 for _, lsp in ipairs(servers) do
