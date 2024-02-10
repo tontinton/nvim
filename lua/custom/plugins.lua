@@ -12,6 +12,7 @@ local plugins = {
         "rust",
         "python",
         "go",
+        "javascript",
 
         "toml",
         "json",
