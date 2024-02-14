@@ -112,6 +112,13 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   end
 })
 
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = {"*.tf"},
+  callback = function()
+    vim.cmd [[set filetype=hcl]]
+  end
+})
+
 vim.api.nvim_create_autocmd('BufReadPost', {
   desc = 'Open file at the last position it was edited earlier',
   pattern = '*',
