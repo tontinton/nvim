@@ -17,6 +17,7 @@ local plugins = {
         "toml",
         "json",
         "dockerfile",
+        "hcl",
       },
     },
   },
