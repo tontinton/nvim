@@ -268,7 +268,11 @@ local plugins = {
       vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
 
       -- Go
-      require('dap-go').setup()
+      require('dap-go').setup({
+        delve = {
+          build_flags = "-tags=debug",
+        },
+      })
 
       -- Python
       require('dap-python').setup()
