@@ -19,6 +19,8 @@ local plugins = {
         "json",
         "dockerfile",
         "hcl",
+
+        "ebnf",
       },
     },
   },

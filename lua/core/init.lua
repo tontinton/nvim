@@ -125,6 +125,8 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   command = 'silent! normal! g`"zv'
 })
 
+vim.filetype.add { extension = { ebnf = 'ebnf' } }
+
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 
