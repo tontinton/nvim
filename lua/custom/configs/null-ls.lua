@@ -9,7 +9,7 @@ local sources = {
 
   -- Python
   formatting.autoflake,
-  lint.flake8.with({extra_args = {"--max-line-length", "120"}}),
+  -- lint.flake8.with({extra_args = {"--max-line-length", "120"}}),
 
   -- Go
   formatting.gofumpt,
