@@ -57,10 +57,16 @@ local plugins = {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "nvimtools/none-ls.nvim",
-      config = function()
-        require "custom.configs.null-ls"
-      end,
+      {
+        "nvimtools/none-ls.nvim",
+        dependencies = {
+          "nvimtools/none-ls-extras.nvim",
+          "gbprod/none-ls-shellcheck.nvim",
+        },
+        config = function()
+          require "custom.configs.null-ls"
+        end,
+      },
     },
     config = function()
       require "plugins.configs.lspconfig"

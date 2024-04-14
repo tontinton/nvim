@@ -1,15 +1,14 @@
 local null_ls = require "null-ls"
 
 local formatting = null_ls.builtins.formatting
-local lint = null_ls.builtins.diagnostics
 
 local sources = {
   -- Rust
-  formatting.rustfmt,
+  require("none-ls.formatting.rustfmt"),
 
   -- Python
-  formatting.autoflake,
-  -- lint.flake8.with({extra_args = {"--max-line-length", "120"}}),
+  -- require('none-ls.diagnostics.ruff'),
+  require('none-ls.formatting.ruff_format'),
 
   -- Go
   formatting.gofumpt,
@@ -17,7 +16,8 @@ local sources = {
   -- C/C++
   formatting.clang_format,
 
-  lint.shellcheck,
+  require("none-ls-shellcheck.diagnostics"),
+  require("none-ls-shellcheck.code_actions"),
 }
 
 null_ls.setup {

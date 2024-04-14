@@ -2,12 +2,12 @@ local options = {
   ensure_installed = {
     "lua-language-server",
     "jedi-language-server",
+    "ruff",
     "debugpy",
     "rust-analyzer",
     "codelldb",
     "cpptools",
     "clang-format",
-    "flake8",
     "clangd",
     "gopls",
     "gofumpt",
