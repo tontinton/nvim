@@ -8,6 +8,7 @@ local servers = {
   "jedi_language_server",
   "gopls",
   "tsserver",
+  "jdtls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -16,6 +17,8 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- C/C++
 
 lspconfig.clangd.setup {
   on_attach = on_attach,
@@ -26,7 +29,7 @@ lspconfig.clangd.setup {
   },
 }
 
--- Rust config
+-- Rust
 
 local codelldb_root = mason_registry.get_package("codelldb"):get_install_path() .. "/extension/"
 local codelldb_path = codelldb_root .. "adapter/codelldb"
