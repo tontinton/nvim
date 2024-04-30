@@ -13,6 +13,7 @@ local plugins = {
         "python",
         "go",
         "javascript",
+        "tsx",
         "java",
 
         "toml",
