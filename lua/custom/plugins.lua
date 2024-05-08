@@ -20,6 +20,7 @@ local plugins = {
         "json",
         "dockerfile",
         "hcl",
+        "graphql",
 
         "ebnf",
       },
