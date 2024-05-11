@@ -63,6 +63,29 @@ end
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"
 
+-------------------------------------- neovide ------------------------------------------
+
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font:h11"
+  vim.g.neovide_fullscreen = true
+
+  vim.g.neovide_scroll_animation_length = 0.1
+  vim.g.neovide_cursor_animation_length = 0
+  vim.g.neovide_cursor_trail_size = 0
+  vim.g.neovide_cursor_antialiasing = false
+
+  vim.g.neovide_scale_factor = 1.0
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set("n", "<C-=>", function()
+    change_scale_factor(1.1)
+  end)
+  vim.keymap.set("n", "<C-->", function()
+    change_scale_factor(1/1.1)
+  end)
+end
+
 -------------------------------------- autocmds ------------------------------------------
 local autocmd = vim.api.nvim_create_autocmd
 
