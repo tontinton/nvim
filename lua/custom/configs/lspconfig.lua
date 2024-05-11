@@ -5,6 +5,7 @@ local mason_registry = require("mason-registry")
 
 local lspconfig = require "lspconfig"
 local servers = {
+  "lua_ls",
   "jedi_language_server",
   "gopls",
   "tsserver",
