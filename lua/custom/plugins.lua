@@ -338,6 +338,48 @@ local plugins = {
       local liblldb_path = codelldb_root .. "lldb/lib/liblldb.so"
       dap.adapters.rust = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
 
+      dap.configurations.rust = {
+        {
+          name = "/target/debug",
+          type = "rust",
+          request = "launch",
+          program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+          end,
+          cwd = '${workspaceFolder}',
+          stopOnEntry = true,
+          showDisassembly = "never",
+        },
+      }
+
+      -- Example .vscode/launch.json
+      -- {
+      --   "version": "0.2.0",
+      --   "configurations": [
+      --       {
+      --           "type": "rust",
+      --           "request": "launch",
+      --           "name": "Debug Search",
+      --           "program": "${fileDirname}/../target/debug/${fileBasenameNoExtension}",
+      --           "args": ["search", "~/test/output.index", "1155", "severity_text:INFO", "--limit:", "1"],
+      --           "cwd": "${workspaceRoot}",
+      --           "sourceLanguages": [
+      --               "rust"
+      --           ]
+      --       },
+      --       {
+      --           "type": "rust",
+      --           "request": "launch",
+      --           "name": "Debug Index",
+      --           "program": "${fileDirname}/../target/debug/${fileBasenameNoExtension}",
+      --           "args": ["index", "~/hdfs-logs-multitenants-10000.json", "~/test"],
+      --           "cwd": "${workspaceRoot}",
+      --           "sourceLanguages": [
+      --               "rust"
+      --           ]
+      --       }
+      --   ]
+      -- }
       require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'c', 'h'}, rt_lldb={'rust'}})
     end
   },
