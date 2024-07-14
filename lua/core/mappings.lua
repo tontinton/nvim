@@ -88,6 +88,9 @@ M.general = {
     ["<leader>dq"] = { "<cmd> lua require('dap').terminate() <CR>", "Debug - terminate" },
 
     ["<leader>dR"] = { "<cmd> PBClearAllBreakpoints <CR>", "Debug - clear breakpoints" },
+
+    -- markdown
+    ["<leader>md"] = { "<cmd> RenderMarkdownToggle <CR>", "Markdown prettier" },
   },
 
   t = {

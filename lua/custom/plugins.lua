@@ -21,6 +21,8 @@ local plugins = {
         "dockerfile",
         "hcl",
         "graphql",
+        "markdown",
+        "markdown_inline",
 
         "ebnf",
       },
@@ -166,6 +168,16 @@ local plugins = {
   },
 
   'nvim-telescope/telescope-live-grep-args.nvim',
+
+  {
+    'MeanderingProgrammer/markdown.nvim',
+    cmd = "RenderMarkdownToggle",
+    name = 'render-markdown',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  },
 
   {
     'echasnovski/mini.nvim',
