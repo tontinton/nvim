@@ -310,6 +310,33 @@ local plugins = {
           build_flags = "-tags=debug",
         },
       })
+      dap.adapters.go = function(callback, config)
+        callback({
+          type = 'server',
+          host = config.host or '127.0.0.1',
+          port = config.port or 40000
+        })
+      end
+      table.insert(dap.configurations.go, {
+        type = 'go',
+        name = 'Attach to port 40000',
+        request = 'attach',
+        mode = 'remote',
+        port = 40000,
+        host = '127.0.0.1'
+      })
+      table.insert(dap.configurations.go, {
+        type = 'go',
+        name = 'Attach to input port',
+        request = 'attach',
+        mode = 'remote',
+        host = function()
+          return vim.fn.input('Host [127.0.0.1]: ', '127.0.0.1')
+        end,
+        port = function()
+          return tonumber(vim.fn.input('Port [40000]: ', '40000'))
+        end
+      })
 
       -- Python
       require('dap-python').setup()

@@ -7,7 +7,6 @@ local lspconfig = require "lspconfig"
 local servers = {
   "lua_ls",
   "jedi_language_server",
-  "gopls",
   "tsserver",
   "jdtls",
 }
@@ -18,6 +17,20 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- Go
+
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      analyses = {
+        shadow = true,
+      },
+    },
+  },
+}
 
 -- C/C++
 
