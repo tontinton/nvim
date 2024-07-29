@@ -90,7 +90,7 @@ M.general = {
     ["<leader>dR"] = { "<cmd> PBClearAllBreakpoints <CR>", "Debug - clear breakpoints" },
 
     -- markdown
-    ["<leader>md"] = { "<cmd> RenderMarkdownToggle <CR>", "Markdown prettier" },
+    ["<leader>md"] = { "<cmd> lua require('render-markdown').toggle() <CR>", "Markdown prettier" },
   },
 
   t = {
