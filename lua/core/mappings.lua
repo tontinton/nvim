@@ -335,6 +335,7 @@ M.telescope = {
     ["<leader>fe"] = { "<cmd> Telescope diagnostics bufnr=0 severity=ERROR <CR>", "Errors" },
     ["<leader>fE"] = { "<cmd> Telescope diagnostics bufnr=0 <CR>", "Diagnostics" },
     ["<leader>'"]  = { "<cmd> Telescope resume <CR>", "Resume last telescope" },
+    ["<leader>fy"]  = { "<cmd> let @+=expand('%:.') <CR>", "Yank path" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
