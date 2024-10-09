@@ -8,7 +8,7 @@ local servers = {
   "lua_ls",
   "jedi_language_server",
   "gopls",
-  "tsserver",
+  "ts_ls",
   "jdtls",
 }
 
