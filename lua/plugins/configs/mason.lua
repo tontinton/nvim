@@ -12,6 +12,7 @@ local options = {
     "gopls",
     "gofumpt",
     "typescript-language-server",
+    "csharp-language-server",
   },
 
   PATH = "skip",
