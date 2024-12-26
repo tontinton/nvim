@@ -10,6 +10,7 @@ local servers = {
   "gopls",
   "ts_ls",
   "jdtls",
+  "csharp_ls",
 }
 
 for _, lsp in ipairs(servers) do
