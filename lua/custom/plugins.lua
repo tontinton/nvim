@@ -29,19 +29,19 @@ local plugins = {
     },
   },
 
-  {
-    'nvim-treesitter/nvim-treesitter-context',
-    init = function()
-      require("core.utils").lazy_load "nvim-treesitter-context"
-    end,
-    config = function()
-      require("core.utils").load_mappings "treesitter_context"
-      require('treesitter-context').setup({
-        max_lines = 2,
-        trim_scope = 'inner',
-      })
-    end,
-  },
+  -- {
+  --   'nvim-treesitter/nvim-treesitter-context',
+  --   init = function()
+  --     require("core.utils").lazy_load "nvim-treesitter-context"
+  --   end,
+  --   config = function()
+  --     require("core.utils").load_mappings "treesitter_context"
+  --     require('treesitter-context').setup({
+  --       max_lines = 2,
+  --       trim_scope = 'inner',
+  --     })
+  --   end,
+  -- },
 
   {
    "nvim-telescope/telescope.nvim",
